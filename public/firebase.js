@@ -1,7 +1,7 @@
 var Config = {
   apiKey: "AIzaSyBO3jIJaIbWQSIpjKHfx5kfgnunHhPhE2k",
   authDomain: "edulivechat.firebaseapp.com",
-  //databaseURL: "https://edulivestream-dummy-default-rtdb.firebaseio.com",
+  databaseURL: "https://edulivechat-default-rtdb.firebaseio.com/",
   projectId: "edulivechat",
   storageBucket: "edulivechat.appspot.com",
   messagingSenderId: "38433955037",

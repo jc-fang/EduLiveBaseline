@@ -559,6 +559,6 @@ blockquote:after {
 .popover{
   max-width: 450px;
   min-width: 400px;
-  height: 600px;
+  height: 560px;
   overflow-y: scroll;
 }

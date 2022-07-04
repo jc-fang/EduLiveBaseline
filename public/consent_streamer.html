@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Educational Live Stream</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/dist/progress.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" style="background-color: #17a2b8; color:white">
+        <span class="navbar-brand mb-0 h1">Educational Live Stream</span>
+        <span class='col align-items-end' id='workerid' style="float:right"> </span>
+    </nav>
+    <div class="container">
+        <div class="row bg-margin">
+            <h1>Consent to Participate in Research and Instruction (Streamer)</h1>
+
+        </div>
+        <div class="row bg-margin">
+            <div>Title of study: Towards Participatory Educational Live Streaming.<br>
+              Investigator: Jingchao Fang, Hao-Chuan Wang.<br>
+              Contact information: If you have any questions about this research, please feel free to contact the investigator at notestruct2020@gmail.com.
+            </div>
+        </div>
+        <div class="row bg-margin">
+            <h4> Introduction </h4>
+        </div>
+        <div class="row bg-margin">
+            <div>You are being invited to join a research study.  If you agree to be in this research, you will be asked to conduct an educational live stream,
+              monitoring our interface that reflects students’ activities, and participate in an interview with one of the researcher. Your taking part in this research should
+              take about 40-60 minutes for live streaming, and about 40 minutes for the interview (the interview will be audio-taped). The educational material could be prepared
+              by yourself, or prepared by researchers upon request.</div>
+            <div> <b>Taking part in research is completely voluntary. </b>You are free to decline to take part in the project.  You can decline to answer any questions and you can stop taking part in the project at any time.
+              Whether or not you choose to take part, or answer any question, or stop being in the project, there will be no penalty to you or loss of benefits to which
+              you are otherwise entitled.
+ </div>
+  <br>
+        </div>
+
+
+
+        <div class="row bg-margin">
+            <h4> Compensation </h4>
+        </div>
+        <div class="row bg-margin">
+            <div>To thank you for participating in this study and to compensate for your time, you will
+                receive a $50 Amazon e-gift card. </div>
+        </div>
+
+        <div class="row bg-margin">
+            <div> If you agree to take part in the research, you can save a copy of this page
+                to keep for future reference. We have included a more detailed overview below. Please click on the
+                "Accept" button at the end of this page if you agree to participate.</div>
+                 <br>
+        </div>
+
+        <div class="row bg-margin">
+            <h4> Process, Overview and Instruction </h4>
+        </div>
+        <div>
+          <div>
+            <b>Start to live stream</b></br>
+            On one screen:</br>
+            15 min before scheduled time, please join Zoom meeting with the researcher and share your Google Slides.<br> </br>
+
+            On the other screen:</br>
+            Open the experiment interface. When you are ready to speak, click "Start to transcribe".
+            You should be able to see the real-time transcription being generated. DO NOT click "Stop" until you finished your live stream.
+            <br></br>
+            <b>During Live stream</b></br>
+            Student will be able to make annotations (i.e., make highlights and ask questions) based on the transcript.
+            Learners' Annotations Dashboard gives you an overview of how many highlights and questions were made by Learners
+            since your last resume, and the percentage of learners who made these annotations. </br>
+            <img src="./image/dashboard.png" alt="Dashboard screenshot" style="width: 600px ; border:3px solid #fae7b5">
+            <br></br>
+            On the <b>left hand side of the transcript</b>, you will see <span style="color:#17a2b8">green vertical bars </span>representing the parts of the transcipt learners highlighted.
+            Darker green means more people highlighted that sentence.
+            Similarly, on the <b>right hand side of the transcript</b>, you will see <span style="color:red"> red vertical bars </span>representing the parts of the transcipt learners asked questions based on.
+            Darker red means more people asked questions based on that sentence.</br>
+            <img src="./image/viz-bar.png" alt="Visualization bars on the two sides of the transcript" style="width: 400px ; border:3px solid #fae7b5">
+            <br></br>
+            At the beginning of the live stream, there will be a grey "Pause the lecture" button below the youtube video. When a threshold is hit, we will notify you by changing the button to red
+               to remind you to pause. Upon clicking on the "Pause the lecture" button, a window will pop-up and show the summary of learners' activities and annotations. <b>Scroll to the bottom</b> to see learners' latest annotations since you last pause (i.e.,text under the last "SUMMARY").
+               Follow the instruction on the pop-up window.</br>
+               When you are ready to resume the lecture, click the red button again.</br>
+               <div style="display: inline">
+                   <img src="./image/pause-grey.png" alt="grey pause button" style="width: 275px; border:3px solid #fae7b5">
+               </div>
+               <div style="display: inline">
+                   <img src="./image/pause-red.png" alt="red pause button" style="width: 275px ; border:3px solid #fae7b5">
+               </div>
+
+            <img src="./image/summary-resume.png" alt="summary window and resume button" style="width: 500px ; border:3px solid #fae7b5">
+            <br></br>
+            <b>Ending Live stream</b></br>
+            When you are ready to end the live stream, click "Stop" button next to "Start to transcribe" to stop real-time transcribing.
+            Click "End the lecture" button to proceed to the next page.</br>
+            <img src="./image/end-lecture.png" alt="end lecture button" style="width: 350px ; border:3px solid #fae7b5">
+          </div>
+        </div>
+
+        <div class="row bg-margin">
+           <div class="col-md-12">
+               <button class="btn btn-info btn-block mb-5" id="btn-finish">Accept</button>
+           </div>
+       </div>
+
+        <!--
+        <div class="row bg-margin" style="display: block;">
+            <h5>First Phase</h5>
+            <p class="bg-text">
+                In the first phase, you will watch a video and make highlights on the transcript.
+            </p>
+
+        </div>
+        <div class="row bg-margin">
+            <h5>Second Phase</h5>
+            <div class="bg-text">In the second phase, you are supposed to further elaborate on your annotations of the
+                first phase (e.g., provide specific examples or thoughts of your previously highlighted sentences,
+                etc.).</div class="bg-text">
+        </div>
+        <div class="row bg-margin">
+            <h5>Third Phase</h5>
+            <div class="bg-text">In the third phase, you will see your previous notes that were taken in second phase.
+                This is the last
+                phase of note-taking and you should make your notes complete and more readable (for example, by adding
+                more details, arrange the format, etc.). </div class="bg-text">
+        </div> -->
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./login.js"></script>
+    <script src="./pipelineControl.js"></script>
+
+    <script type="text/javascript">
+      // var userID = location.hash.split("#")[1]
+      function getCurrentTime() {
+          var d = new Date();
+          var n = d.getTime();
+          return n
+      }
+
+      function getUserID() {
+        return location.hash.split("#")[1]
+      }
+
+      // document.getElementById('submit-btn').addEventListener("click", async function () {
+      //   firebase.database().ref('course/'+'currNumOfQ').set(0);
+      //   firebase.database().ref('course/'+'currNumOfH').set(0);
+      //   firebase.database().ref('course/'+'currNumOfStudent').set(0);
+      //   var currentTime = new Date().getTime();
+      //   firebase.database().ref('course/'+'latestPauseTime').set(currentTime);
+      //   firebase.database().ref('course/'+'latestResumeTime').set(currentTime);
+      //   firebase.database().ref('course/'+'instructorID').set(getUserID());
+      //   firebase.database().ref('course/'+'CourseStarted').set("True");
+      //   firebase.database().ref('course/'+'CourseEnded').set("False");
+      //   firebase.database().ref('course/'+'NowPausing').set("False");
+      //   firebase.database().ref('course/' + 'NowTranscribing').set("False");
+      //   var userID = getUserID();
+      //   firebase.database().ref('user/' + userID + '/Time' + '/setThreshold').set(getCurrentTime());
+      //
+      //   firebase.database().ref('course/'+'pauseThreshold').set(getThreshold()).then(() => {
+      //     document.location = "youtube_streamer.html#" + getUserID();
+      //   });
+      //
+      // })
+
+      //$("#btn-finish").click(function () {
+        document.getElementById('btn-finish').addEventListener("click", async function () {
+          var userID = location.hash.split("#")[1]
+          firebase.database().ref('course/'+'instructorID').set(userID);
+          firebase.database().ref('course/'+'CourseStarted').set("True");
+          firebase.database().ref('course/'+'CourseEnded').set("False");
+          firebase.database().ref('user/' + userID + '/Time' + '/finishedConsent').set(getCurrentTime()).then(() => {
+            window.location = "youtube_streamer.html#" + userID;
+          })
+
+
+
+      })
+    </script>
+
+</body>
+
+</html>

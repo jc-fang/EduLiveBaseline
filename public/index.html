@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Educational Live Stream</title>
@@ -16,84 +16,98 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
-	<script src="./firebase.js"></script>
-
-
 </head>
 
 <body>
-  <nav class="navbar" style="background-color: #17a2b8; color:white">
-    <span class="navbar-brand mb-0 h1">Educational Live Stream </span>
-  </nav>
-  <div style="float: left; padding-left:8em; padding-top:1.5em">
-    <iframe width="770" height="570" style=" display:inline; float: left" src="https://www.youtube.com/embed/_AQ5gd9SvxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <div class="container" >
-		<div style="float: right; border: 0px solid black; width: 30%; height: 900px;padding-top:1.5em">
-				<button onclick="showHideChat()" id="chat" value="Chat"
-				data-toggle="popover"  data-popover-content='#a2' data-placement="bottom">
-						&#x25BC CHAT
-				</button>
-
-		<div class="hidden" style="display: none;" id="a2">
-
-				<div class="popover-body" id="chat">
-					<div style="padding: 5px 10px">
-					  <iframe id="slido" src="https://app.sli.do/event/fpqJcuEA2aH7xqbV8DZG1f" height="100%" width="100%" style="min-height: 630px;"></iframe>
-					</div>
-				</div>
-</div>
+	<nav class="navbar" style="background-color: #17a2b8; color:white">
+		<span class="navbar-brand mb-0 h1">Educational Live Stream </span>
+	</nav>
+	<div class="container">
+		<br></br>
+		<div class="row bg-margin">
+			<h4>Educational live stream: Annotating while watching educational live stream</h3>
+			<br></br>
 		</div>
-  <!-- <div style="float: right; border: 0px solid black; width: 30%; height: 480px;padding-top:1.5em">
-		<button id="min1">
-		<button id="max1">
-    <iframe id="slido" src="https://app.sli.do/event/fpqJcuEA2aH7xqbV8DZG1f" height="0%" width="100%" style="min-height: 560px;"></iframe>
-  </div> -->
+		<div class="row bg-margin">
+			<div class="bg-text font-weight-bold"> Please read the following information carefully before proceeding.
+			</div>
+			<div class="bg-text"> This study needs you to learn through an educational live stream. You are eligible for
+				the study if you do not have a disability of hearing, reading or judging. You need to be a student and
+				at least 18 years old to attend the study. You also need to be proficient in English. If you have
+				vision, hearing or judgment impairment, please don't move forward.
+				<br></br>
+			</div>
+			<div class="bg-text font-weight-bold"> What will you do? </div>
+			<div class="bg-text"> In this task, you will (1)
+				learn through the live stream lecture and make annotations (highlights/questions) based on the real-time transcipt, and afterwards (2) fill
+				out the survey. The task will last about 60 minutes. You will receive a $10 payment through Prolific after
+				completing the task.
+			</div>
+			<!-- <div class="bg-text"> The following page will give you an instruction about how to perform the summary and comments. Your goal is to create a clear and complete summary, and comment your thoughts as much as possible.</div> -->
+			<div class="bg-text font-weight-bold text-danger"> Please follow the instructions closely at all times when doing
+				this task. Your assignment may be rejected if we detect that you did not pay attention when doing this
+				task or we identify obvious evidence that you were not taking the task seriously.
+			</div>
+			<div class="bg-text"> <span class="font-weight-bold text-danger">Please do not close the webpage
+					once you start until you complete the whole task (i.e. after you finish the survey and see the
+					'thank you' page). After you see the 'thank you' page, make sure to click on the provided link and
+					return to the Prolific webpage to get your payment. </span>
+					<br></br>
+				</div>
+
+			<div class="bg-text font-weight-bold d-block"> Contact information: </div>
+			<div class="bg-text d-block"> If you have questions about this research or think you have been harmed by
+				participating, you may contact notestruct2020@gmail.com.
+
+			</div>
+			<div class="bg-text d-block"> To proceed, please enter your Prolific ID. Please also enter your preferred
+				name. Note that you don't need to enter your real name if you would like remain anonymous for this task.
+				<br></br>
+
+			</div>
 
 
-  </div>
+		</div>
 
-
-
-  </div>
-
+		<div class="row bg-margin">
+			<div class="col-8">
+				<div class="alert alert-danger fade show" style="display: none;">
+					Someone has used this Participant ID to do the task. If you have already entered for once, you
+					cannot enter again. If not, please contact the researcher and state the issue.
+				</div>
+				<div class="alert alert-warning fade show" style="display: none;" id="input-invalid-alert">
+					<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+					<strong>Warning!</strong> Please enter a valid Participant ID.
+				</div>
+				<div class="alert alert-warning fade show" style="display: none;" id="input-name-invalid-alert">
+					<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+					<strong>Warning!</strong> Please enter your preferred name.
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Participant ID</span>
+					</div>
+					<input type="text" class="form-control" name="id" id="login-name-input">
+				</div>
+				<br/>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Preferred name</span>
+					</div>
+					<input type="text" class="form-control" name="preferredName" id="preferred-name-input">
+				</div>
+				<br />
+				<button class="btn btn-info btn-block" id="login-btn">Login</button>
+      <br></br>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/TimeMe.js/2.0.0/timeme.min.js"></script> -->
+	<!-- <script src="./log.js"></script> -->
+	<!--<script src="./pipelineControl.js"></script> -->
+	<script src="./login.js"></script>
+	<script src="./firebase.js"></script>
 </body>
-<script>
-
-	function showHideChat() {
-		var btn = document.getElementById("chat");
-
-		console.log(btn.innerText)
-			if(btn.innerText== "\u25B2 CHAT"){
-				 btn.innerText= "\u25BC CHAT";
-			}
-			else{
-				btn.innerText= "\u25B2 CHAT"
-			}
-		}
-
-		$("[data-toggle=popover]").popover({
-				placement: 'bottom',
-				html: true,
-				delay: {
-				 show: 0,
-				 hide: 0
-				},
-				content: function() {
-				var content = $(this).attr("data-popover-content");
-				return $(content).children(".popover-body").html();
-				},
-				title: function() {
-				var title = $(this).attr("data-popover-content");
-				return $(title).children(".popover-heading").html();
-				}
-		});
-
-		</script>
-
-
-
 
 </html>

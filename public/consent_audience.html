@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Educational Live Stream</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/dist/progress.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" style="background-color: #17a2b8; color:white">
+        <span class="navbar-brand mb-0 h1">Educational Live Stream</span>
+        <span class='col align-items-end' id='workerid' style="float:right"> </span>
+    </nav>
+    <div class="container">
+        <div class="row bg-margin">
+            <h1>Consent to Participate in Research and Instruction (Learner)</h1>
+
+        </div>
+        <div class="row bg-margin">
+            <div class>Title of study: Towards Participatory Educational Live Streaming. <br>
+              Investigator:  Jingchao Fang, Hao-Chuan Wang <br>
+              Contact information: If you have any questions about this research, please feel free to contact the investigator at notestruct2020@gmail.com.
+            </div>
+            <br>
+
+        </div>
+        <div class="row bg-margin">
+            <h4> Introduction </h4>
+        </div>
+        <div class="row bg-margin">
+            <div>You are being invited to join a research study.  If you agree to be in this research, you will be asked to learn from an educational live stream, make transcript-based annotations, and complete a survey. Your taking part in this research should take about 60 minutes.
+            </div>
+            <div> <b>Taking part in research is completely voluntary.</b> You are free to decline to take part in the project.  You can decline to answer any questions and you can stop taking part in the project at any time.  Whether or not you choose to take part, or answer any question, or stop being in the project, there will be no penalty to you or loss of benefits to which you are otherwise entitled.
+            </div>
+            <br>
+        </div>
+
+
+
+        <div class="row bg-margin">
+            <h4> Compensation </h4>
+        </div>
+        <div class="row bg-margin">
+            <div class>To thank you for participating in this study and to compensate for your time, you will
+                receive $10 payment through Prolific. </div>
+                <br>
+        </div>
+
+
+
+
+        <div class="row bg-margin">
+            <div>If you agree to take part in the research, you can save a copy of this page
+                to keep for future reference. We have included a more detailed overview below. Please click on the
+                "Accept" button at the end of this page if you agree to participate.</div>
+                <br>
+        </div>
+
+        <div class="row bg-margin">
+            <h4> Process, Overview and Instruction </h4>
+        </div>
+        <div class="row bg-margin">
+          <div>
+            In this task, you are asked to watching the live streaming lecture, and make annotations (highlight or ask questions) based on the transcript.
+            On the interface, you should be able to see the <b>embedded video on the right</b>, and the <b>real-time transcription on the left</b>.
+            <br></br>
+            On the <b>left hand side of the transcript</b>, you will see <span style="color:#17a2b8">green vertical bars </span>representing the parts of the transcipt you and your peer learners highlighted.
+            Darker green means more people highlighted that sentence.
+            Similarly, on the <b>right hand side of the transcript</b>, you will see <span style="color:red"> red vertical bars </span>representing the parts of the transcipt you and your peer learners asked questions based on.
+            Darker red means more people asked questions based on that sentence.
+            <img src="./image/viz-bar.png" alt="Visualization bars on the two sides of the transcript" style="width: 320px; border:3px solid #fae7b5">
+            <br></br>
+            To make a <b>highlight</b>, select the part of the transcript that you would like to highlight, then click "Highlight" button above the transcript.<br>
+            <img src="./image/GIF-highlight.gif" alt="GIF of highlighting" style="width: 570px; border:3px solid #fae7b5">
+            <br></br>
+            To ask a <b>question</b>, select the corresponding part of the transcript that you don't understand, then click "Question" button above the transcript.
+            Type down your question in the pop-up window, then click "Save" when you finish. To help your instructor understand your questions, please make sure
+            you accurately selected the part of the transcript that your question is based on.<br>
+            <img src="./image/GIF-question.gif" alt="GIF of asking a question" style="width: 570px; border:3px solid #fae7b5">
+            <br></br>
+            If you want to <b>delete</b> a previous highlight or question, move your mouse to the highlight/question, and when a small pop-up window shows up, click "Delete".<br>
+            <img src="./image/GIF-delete.gif" alt="GIF of deleting" style="width: 570px; border:3px solid #fae7b5">
+            <br></br>
+            There is a "Show summary" button below the video player. When instructor is pausing, the button turns red.
+            You can click to see a summary of activities since last resume. Your instructor might address some questions based on the summary. Click the button again to hide the summary.
+            <br>
+            <img src="./image/show-summary.png" alt="Show summary button" style="width: 570px; border:3px solid #fae7b5">
+            <br></br>
+            After the instructor finished the lecture, a "Stop watching" button will show below the real-time transcript. Click to proceed to the next step.
+            <br>
+            <img src="./image/stop-watching.png" alt="Stop watching button" style="width: 300px; height:200px; border:3px solid #fae7b5">
+          </div>
+        </div>
+
+
+
+        <div class="row bg-margin">
+            <div class="col-md-12">
+                <button class="btn btn-info btn-block mb-5" id="btn-finish">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./login.js"></script>
+    <script src="./pipelineControl.js"></script>
+
+    <script type="text/javascript">
+      // var userID = location.hash.split("#")[1]
+      function getCurrentTime() {
+          var d = new Date();
+          var n = d.getTime();
+          return n
+      }
+
+      $("#btn-finish").click(function () {
+          console.log("clicked finish");
+          var userID = location.hash.split("#")[1]
+          firebase.database().ref('user/' + userID + '/Time' + '/finishedConsent').set(getCurrentTime());
+          firebase.database().ref('course/'+'currNumOfStudent').transaction(function(currNumOfStudent) {
+            // currNumOfQ = currNumOfQ+1;
+            return (currNumOfStudent || 0) + 1
+          }).then(() => {
+
+            window.location = "youtube_audience.html#" + userID;
+      		});
+          // var userID = location.hash.split("#")[1]
+          // window.location = "youtube_audience.html#" + userID;
+      });
+    </script>
+
+</body>
+
+</html>
