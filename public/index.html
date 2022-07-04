@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Educational Live Stream</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+	<script src="./firebase.js"></script>
+
+
+</head>
+
+<body>
+  <nav class="navbar" style="background-color: #17a2b8; color:white">
+    <span class="navbar-brand mb-0 h1">Educational Live Stream </span>
+  </nav>
+  <div style="float: left; padding-left:8em; padding-top:1.5em">
+    <iframe width="770" height="570" style=" display:inline; float: left" src="https://www.youtube.com/embed/_AQ5gd9SvxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="container" >
+		<div style="float: right; border: 0px solid black; width: 30%; height: 900px;padding-top:1.5em">
+				<button onclick="showHideChat()" id="chat" value="Chat"
+				data-toggle="popover"  data-popover-content='#a2' data-placement="bottom">
+						&#x25BC CHAT
+				</button>
+
+		<div class="hidden" style="display: none;" id="a2">
+
+				<div class="popover-body" id="chat">
+					<div style="padding: 5px 10px">
+					  <iframe id="slido" src="https://app.sli.do/event/fpqJcuEA2aH7xqbV8DZG1f" height="100%" width="100%" style="min-height: 630px;"></iframe>
+					</div>
+				</div>
+</div>
+		</div>
+  <!-- <div style="float: right; border: 0px solid black; width: 30%; height: 480px;padding-top:1.5em">
+		<button id="min1">
+		<button id="max1">
+    <iframe id="slido" src="https://app.sli.do/event/fpqJcuEA2aH7xqbV8DZG1f" height="0%" width="100%" style="min-height: 560px;"></iframe>
+  </div> -->
+
+
+  </div>
+
+
+
+  </div>
+
+</body>
+<script>
+
+	function showHideChat() {
+		var btn = document.getElementById("chat");
+
+		console.log(btn.innerText)
+			if(btn.innerText== "\u25B2 CHAT"){
+				 btn.innerText= "\u25BC CHAT";
+			}
+			else{
+				btn.innerText= "\u25B2 CHAT"
+			}
+		}
+
+		$("[data-toggle=popover]").popover({
+				placement: 'bottom',
+				html: true,
+				delay: {
+				 show: 0,
+				 hide: 0
+				},
+				content: function() {
+				var content = $(this).attr("data-popover-content");
+				return $(content).children(".popover-body").html();
+				},
+				title: function() {
+				var title = $(this).attr("data-popover-content");
+				return $(title).children(".popover-heading").html();
+				}
+		});
+
+		</script>
+
+
+
+
+</html>
