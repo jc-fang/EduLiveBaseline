@@ -31,7 +31,8 @@
   </div>
 
 	<div align="left" style="position:absolute;float:left;margin-top:635px;margin-left:40px">
-<script id="cid0020000319121445410" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js" style="width: 307px;height: 414px;">{"handle":"edulivechat","arch":"js","styles":{"a":"17a2b8","b":100,"c":"FFFFFF","d":"FFFFFF","k":"17a2b8","l":"17a2b8","m":"17a2b8","n":"FFFFFF","p":"15.3","q":"17a2b8","r":100,"t":0,"ab":false,"usricon":0,"bpos":"bl","cv":1,"cvbg":"17a2b8","cvfg":"ffffff","cvw":155,"cvh":28,"surl":0,"allowpm":0,"cnrs":"0.35"}}</script>
+<!-- <script id="cid0020000319121445410" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js" style="width: 307px;height: 414px;">{"handle":"edulivechat","arch":"js","styles":{"a":"17a2b8","b":100,"c":"FFFFFF","d":"FFFFFF","k":"17a2b8","l":"17a2b8","m":"17a2b8","n":"FFFFFF","p":"15.3","q":"17a2b8","r":100,"t":0,"ab":false,"usricon":0,"bpos":"bl","cv":1,"cvbg":"17a2b8","cvfg":"ffffff","cvw":155,"cvh":28,"surl":0,"allowpm":0,"cnrs":"0.35"}}</script> -->
+<script id="cid0020000319432255009" data-cfasync="false" async src="https://st.chatango.com/js/gz/emb.js" style="width: 307px;height: 414px;">{"handle":"edulivechat","arch":"js","styles":{"a":"17a2b8","b":100,"c":"FFFFFF","d":"FFFFFF","k":"17a2b8","l":"17a2b8","m":"17a2b8","n":"FFFFFF","p":"15.3","q":"17a2b8","r":100,"t":0,"ab":false,"usricon":0,"bpos":"bl","cv":1,"cvbg":"17a2b8","cvw":155,"cvh":28,"surl":0,"allowpm":0,"cnrs":"0.35"}}</script>
 </div>
   <div class="container">
 		<!-- <div style="float: right; border: 0px solid black; width: 30%; height: 690px;padding-top:1.5em">
@@ -115,7 +116,7 @@ $(document).ready(function () {
 
 			var userID = location.hash.split("#")[1]
 			firebase.database().ref('user/' + userID + '/Time' + '/stopWatching').set(getCurrentTime()).then(() => {
-				document.location = "finish_audience.html#" + getUserID();
+				document.location = "audience_survey.html#" + getUserID();
 			});
 		})
 

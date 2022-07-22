@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+  <title>Educational Live Stream</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dist/progress.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="https://docs.google.com">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" style="background-color: #17a2b8; color:white">
+    <span class="navbar-brand mb-0 h1">Educational Live Stream </span>
+    <span class='col align-items-end' style="float:right"> Participant ID: <span id="uid">id</span> </span>
+  </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <iframe onload="loaded()" src="" width="100%" height="5655px" frameborder="0" marginheight="0"
+                    marginwidth="0" id="form">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TimeMe.js/2.0.0/timeme.min.js"></script>
+    <script src="./firebase.js"></script>
+    <script type="text/javascript">
+        var userID = location.hash.split("#")[1]
+
+        var start;
+        loadCounter = 0;
+        function getCurrentTime() {
+            var d = new Date();
+            var n = d.getTime();
+            return n
+        }
+        loaded = function () {
+            loadCounter += 1;
+            if (loadCounter == 3) {
+                firebase.database().ref('user/' + userID + '/Time/post-survey-finished').set(getCurrentTime())
+                    .then(() => {
+                        //Log("redirect:thank-you");
+                        document.location = "finish_audience.html#" + userID;
+                    });
+            }
+        }
+        $(document).ready(function () {
+
+            var uid = document.getElementById("uid")
+            uid.innerHTML = userID
+            start = Date.now();
+            loadCounter = 0;
+            $("#form").attr("src",
+                // "https://docs.google.com/forms/d/e/1FAIpQLSfLNmETZ74rv4bFz4Fok65dYW8RVTh8AHjtTiba4F_CBC07TA/viewform?usp=pp_url&entry.774945122=" +
+                // userID + "&embedded=true"
+                "https://docs.google.com/forms/d/e/1FAIpQLSeaa_72ZRQ_9c6X4ScKbmLiGI5k60K3DvoVL_oe8CqmeDxgnQ/viewform??usp=pp_url&entry.774945122="+userID + "&embedded=true"
+            );
+        });
+    </script>
+</body>
